@@ -1,0 +1,10 @@
+.skill-item__overlay
+{   
+    z-index: 1;
+    @include unlist;
+
+    transition: opacity .5s;
+
+    opacity: .8;
+    background-color: $color-primary;
+}

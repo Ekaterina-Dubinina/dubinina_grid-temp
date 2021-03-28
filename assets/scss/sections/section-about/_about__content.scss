@@ -1,0 +1,45 @@
+.about__content {
+    font-size: 18px;
+    line-height: 1.15;
+    color: #637588;
+    font-weight: 400px;
+    font-family: "Roboto";
+    
+    p:first-of-type {
+      position: relative;
+      margin-top: -5px;
+      
+    }
+    p:first-of-type::after {
+        position: absolute;
+        top: 0;
+        width: 2px;
+        height: 200px;
+        content: "";
+        background-color: rgba(99, 117, 136, 0.1);
+
+        @include lg-min {
+            right: -50px;
+        }
+        @include lg-md {
+            right: -20px; 
+        }
+        @include md-sm {
+            right: -10px;
+        }
+        @include sm {
+            display: none;
+        }
+
+      }
+    p:last-of-type {
+      margin: 0;
+    }
+  }
+  @media (min-width: 992px) {
+    .about__content p {
+      font-size: 1.125rem;
+    }
+  }
+  
+  

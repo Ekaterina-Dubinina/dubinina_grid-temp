@@ -1,0 +1,27 @@
+.about__container {
+  display: grid;
+  grid-template-columns: 1fr 271px;
+  gap: 100px;
+
+  max-width: 1340px;
+  margin: auto;
+  padding-right: $gap;
+  padding-left: $gap;
+  
+  @include lg-min {
+    grid-template-columns: 1fr 271px;
+    gap: $gap * 5;
+  }
+  @include lg-md {
+    grid-template-columns: 1fr 271px;
+    gap: $gap * 2;
+  }
+  @include md-sm {
+    grid-template-columns: 1fr 236px;
+    gap: $gap;
+  }
+  @include sm {
+    gap: $gap;
+    grid-template-columns: 1fr;
+  }
+}

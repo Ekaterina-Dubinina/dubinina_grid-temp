@@ -1,0 +1,82 @@
+.form {
+  padding: 30px 0;
+  background-color: #2d3651;
+
+  &__container {
+    display: grid;
+    gap: $gap;
+    max-width: 1340px;
+    margin: auto;
+    padding-right: $gap;
+    padding-left: $gap;
+  }
+}
+.form-item__input {
+  display: block;
+  width: 100%;
+  height: $gap * 3;
+  padding-right: 30px;
+  padding-left: 30px;
+  transition: background-color 0.5s, border-color 0.5s;
+  letter-spacing: 0.15em;
+  border: 2px solid rgba($color-light, 0);
+  border-bottom-color: rgba($color-light, 0.25);
+  background-color: rgba($color-light, 0.05);
+  font-size: 1.125rem;
+  &::placeholder {
+    color: $color-gray;
+    transition: background-color 0.5s, border-color 0.5s;
+  }
+  &:hover,
+  &:focus {
+    background-color: rgba($color-light, 0.15);
+    border: 2px solid $color-gray;
+    border-bottom-color: rgba($color-light, 1);
+    outline: 0;
+  }
+}
+.form-item__input:hover {
+  &::placeholder {
+    color: $color-gray-light;
+  }
+}
+.form .btn--primary {
+  color: #ffffff;
+  border-color: rgba($color-light, 0);
+  border-bottom-color: rgba($color-light, 0.25);
+  background-color: rgba($color-light, 0.1);
+  font-weight: 400;
+  font-family: "Roboto";
+  transition: background-color 0.5s, border-color 0.5s;
+  &:hover,
+  &:focus {
+    background-color: $color-accent;
+    border-color: $color-light;
+    outline: 0;
+  }
+
+  @include md-min {
+    min-width: 100%;
+  }
+  @include md-sm {
+    min-width: 100%;
+  }
+}
+.form__container {
+  @include md-min {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include md-sm {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.form-item:nth-of-type(1) {
+  @include md-sm {
+    grid-column: 1 / span 2;
+    grid-column-start: 1;
+    grid-column-end: span 2;
+  }
+}
+
+
