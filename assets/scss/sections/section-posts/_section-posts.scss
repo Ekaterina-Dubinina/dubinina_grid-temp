@@ -1,60 +1,73 @@
-.post {
-  @include lg-min {
-    padding-top: $gap * 5;
-    padding-bottom: $gap * 5;
-  }
-  @include lg-md {
-    padding-top: $gap * 4;
-    padding-bottom: $gap * 4;
-  }
-
-  @include md {
-    padding-top: $gap * 3;
-    padding-bottom: $gap * 3;
-  }
-  h2 {
-    margin-top: 0;
-  }
+.post
+{
+    @include lg-min
+    {
+        padding-top: $gap * 5;
+        padding-bottom: $gap * 5;
+    }
+    @include lg-md
+    {
+        padding-top: $gap * 4;
+        padding-bottom: $gap * 4;
+    }
+    @include md
+    {
+        padding-top: $gap * 3;
+        padding-bottom: $gap * 3;
+    }
+    h2
+    {
+        margin-top: 0;
+    }
 }
-.post__container {
-  max-width: 1340px;
-  margin: auto;
-  padding-right: $gap;
-  padding-left: $gap;
+.post__container
+{
+    @include container;
 }
-.post__grids {
-  display: grid;
-  padding-bottom: $gap;
-  gap: $gap;
+.post__grids
+{
+    display: grid;
 
-  @include lg-min {
-    grid-template-areas: "a1 a1 a2 a3" "a4 a5 a6 a6";
-    grid-template-columns: repeat(4, 1fr);
-  }
-  @include lg-md {
-    grid-template-areas: "a1 a1 a2" "a3 a4 a4" "a5 a5 a6";
-    grid-template-columns: repeat(3, 1fr);
-  }
-  @include md-sm {
-    grid-template-areas: "a1 a2" "a3 a4" "a5 a6";
-    grid-template-columns: 1fr 1fr;
-  }
-  @include sm {
-    grid-template-areas: "a1" "a2" "a3" "a4" "a5" "a6";
-    grid-template-columns: 1fr;
-  }
-}
+    padding-bottom: $gap;
 
-a {
-  text-decoration: none;
-  color: #ffffff;
-  background-color: transparent;
+    gap: $gap;
+    @include lg-min
+    {
+        grid-template-areas: 'a1 a1 a2 a3' 'a4 a5 a6 a6';
+        grid-template-columns: repeat(4, 1fr);
+    }
+    @include lg-md
+    {
+        grid-template-areas: 'a1 a1 a2' 'a3 a4 a4' 'a5 a5 a6';
+        grid-template-columns: repeat(3, 1fr);
+    }
+    @include md-sm
+    {
+        grid-template-areas: 'a1 a2' 'a3 a4' 'a5 a6';
+        grid-template-columns: 1fr 1fr;
+    }
+    @include sm
+    {
+        grid-template-areas: 'a1' 'a2' 'a3' 'a4' 'a5' 'a6';
+        grid-template-columns: 1fr;
+    }
 }
 
-.post__actions{
-  @include sm-min{
-    display: flex;
-    justify-content: center;
-  }
+a
+{
+    text-decoration: none;
+
+    color: #fff;
+    background-color: transparent;
+}
+
+.post__actions
+{
+    @include sm-min
+    {
+        display: flex;
+
+        justify-content: center;
+    }
 }
 
