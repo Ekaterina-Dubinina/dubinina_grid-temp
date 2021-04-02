@@ -23,9 +23,11 @@
     height: $gap * 3;
     padding-right: 30px;
     padding-left: 30px;
+   
 
     transition: background-color .5s, border-color .5s;
     letter-spacing: .15em;
+    color: #ffffff;
 
     border: 2px solid rgba($color-light, 0);
     border-bottom-color: rgba($color-light, .25);
